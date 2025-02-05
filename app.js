@@ -6,11 +6,12 @@ amigoElegido.length;
 
 function agregarAmigo() {
     let amigoEscrito = document.getElementById('amigo').value;
-
+    //valida si no se ha insertado ningun valor
     if (amigoEscrito === '') {
         alert('Por favor, inserte un nombre');
     }
     else {
+        //Agrega el nombre ingresado en el array      
         amigoElegido.push(amigoEscrito);
         document.getElementById('listaAmigos').innerHTML = amigoElegido.join('<br>');
         limpiarCampo();
@@ -19,6 +20,7 @@ function agregarAmigo() {
 };
 
 function limpiarCampo() {
+    //limpia el input
     document.getElementById('amigo').value = '';
     return;
 };
